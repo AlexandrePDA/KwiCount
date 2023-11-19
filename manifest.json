@@ -1,0 +1,22 @@
+{
+  "name": "KwiCount",
+  "description": "Avec KwiCount, explorez tout texte que vous rencontrez sur le Web. Que vous soyez un étudiant, un professionnel, un écrivain, ou simplement un curieux, notre extension enrichit instantanément votre expérience de lecture.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "pop-up.html"
+  },
+  "icons": {
+    "1": "images/1.png"
+  }
+}
